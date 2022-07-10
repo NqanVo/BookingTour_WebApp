@@ -1,0 +1,54 @@
+.container-login{
+    display: block;
+    min-height: 700px;
+    position: relative;
+    /* len mobiel bo position  */
+
+}
+.container-login__box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px; 
+    /* len mobiel bo cụm trên  */
+
+    background-color: var(--color-white);
+    border-radius: 5px;
+    box-shadow: var(--shawdown-02);
+    text-align: center;
+    padding: 20px 50px;
+}
+.container-login__box-heading{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--color-main);
+}
+.container-login__box__group{
+    text-align: left;
+    margin-bottom: 10px;
+    position: relative;
+}
+.container-login__box__group-label{
+    font-size: 2rem;
+    color: var(--color-main);
+}
+.container-login__box__group-input-icon{
+    position: relative;
+}
+.container-login__box__group-input{
+    width: 100%;
+    font-size: 1.5rem;
+}
+.container-login__box__group-icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    font-size: 1.5rem;
+    color: var(--color-main);
+    cursor: pointer;
+}
+.container-login__box-btn{
+    margin-top: 10px;
+}

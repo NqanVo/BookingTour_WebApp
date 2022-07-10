@@ -1,0 +1,121 @@
+.container-user{
+    background-color: var(--color-white);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: var(--shawdown-02);
+    overflow: hidden;
+    min-height: 650px;
+}
+.container_information-gr{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.container_information-gruop-btn{
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+}
+.container_information-gruop-btn-gr-right{
+    text-align: left;
+}
+.container_information-gruop-btn-item{
+    color: var(--color-white);
+}
+.container_information-gruop-btn-item-liked{
+    display: none;
+}
+.container_information-gruop-btn-admin{
+    margin-left: 0;
+}
+
+.container_information-avt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.container_information-avt-img{
+    height: 70%;
+    padding: 20px;
+    object-fit: cover;
+    box-shadow: var(--shawdown-02);
+    border-radius: 50%;
+    animation: up_down ease 3s infinite;
+}
+@keyframes up_down{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.container_information-gr-info{
+    height: 200px;
+    background-color: var(--color-minor);
+    border-radius: 5px;
+
+
+}
+.container_information-gr-info-heading{
+    display: block;
+    width: 100%;
+    color: var(--color-main);
+    text-transform: capitalize;
+}
+.container_information-gr-info-group{
+    display: flex;
+    /* height: 200px; */
+}
+.container_information-gr-info-group-text{
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container_information-gr-info-text{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.container_information-gr-work{
+    background-color: var(--color-minor);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container_information-gr-info-heading-update{
+    margin-bottom: 10px;
+}
+.container_information-gr-update-info-bg, .container_information-gr-update-password-bg{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+}
+.container_information-gr-update-info-bg{
+    background-image: url(https://img.freepik.com/free-vector/instant-information-concept-illustration_114360-5264.jpg?t=st=1656638697~exp=1656639297~hmac=28058e0a5983638127c7b59447a8230ada582b2bb5c76bc272414b98aac809a3&w=826);
+    transform: rotateY(180deg);
+}
+
+.container_information-gr-update-password-bg{
+    background-image: url(https://img.freepik.com/free-vector/authentication-concept-illustration_114360-2168.jpg?t=st=1656640028~exp=1656640628~hmac=4af7986474a146cf183aba12a18581944dd8b3ac5d85220c298a52c840f76aba&w=826);
+}
+
+
+
+
+
+
+
+
+   
+ 
+ 

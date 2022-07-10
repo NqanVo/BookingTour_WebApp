@@ -1,0 +1,179 @@
+@import url(./slider.css);
+@import url(./detail_product.css);
+@import url(./login.css);
+@import url(./cart.css);
+@import url(./payment.css);
+@import url(./tour_history.css);
+@import url(./user.css);
+
+.content__label.center{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    box-shadow: none;
+}
+.content__label.non-backgroud{
+    background-color: transparent;
+    box-shadow: none;
+    margin-top: -5px;
+}
+.container{
+    display: block;
+    margin-top:10px;
+    width: 100%;
+}
+.container__content{
+    margin: 5px 0;
+}
+.content__label{
+    width: 100%;
+    height: 40px;
+    background-color: var(--color-txt-error);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 4px;
+    box-shadow: var(--shawdown-02);
+}
+.content__label-heading{
+    color: var(--color-white);
+}
+.content__tour{
+    margin: 5px 0;
+}
+.content__tour-item{
+    min-height: 400px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shawdown-y2-02);
+    position: relative;
+}
+.content__tour-item-link{
+    position: relative;
+    display: block;
+    margin: 10px;
+    border-radius: 10px;
+    height: 240px;
+    overflow: hidden;
+}
+.content__tour-item-img{
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.25s;
+    border-radius: 10px;
+}
+.content__tour-item:hover .content__tour-item-img{
+    transform: scale(1.1);
+}
+.content__tour-item-like a{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    color: var(--color-gray);
+    transition: 0.25s;
+}
+.content__tour-item-like a:hover{
+    transform: scale(1.2);
+}
+.content__tour-item-like a:active{
+    transform: scale(1);
+}
+.content__tour-item-like.liked a{
+    color: var(--color-txt-error);
+    text-shadow: 0 0 10px var(--color-error);
+}
+
+.content__tour-item-group{
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.content__tour-item-heading{
+    line-height: 1.2;
+    text-align: justify;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: var(--color-main);
+    margin-bottom: 5px;
+}
+.content__tour-item-group-text{
+    font-weight: 700;
+}
+.content__tour-item-group-btn{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.content__tour-item-group-btn-link{
+    width: 100%;
+    margin: 0 5px;
+}
+
+/* full ve  */
+.content__tour-item-link.full-ve::before{
+    content: 'HẾT VÉ';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 4rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: var(--color-white);
+    text-shadow: 0 0 20px var(--color-main);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+/* full ve  */
+.content__tour-item-link.full-ve::before{
+    content: 'HẾT VÉ';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 4rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: var(--color-white);
+    text-shadow: 0 0 20px var(--color-main);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+/* het han  */
+.content__tour-item-link.het-han::before{
+    content: 'QUÁ HẠN';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 4rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: var(--color-white);
+    text-shadow: 0 0 20px var(--color-main);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.full-ve ~ .content__tour-item-group .btn-main,.het-han ~ .content__tour-item-group .btn-main{
+    pointer-events:none;
+    background-color: var(--color-gray);
+}

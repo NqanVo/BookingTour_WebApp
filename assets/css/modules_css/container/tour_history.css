@@ -1,0 +1,33 @@
+.container-history__group-note{
+    margin-top: 10px;
+}
+.container-history__group-note-heading{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.container-history__group-note p{
+    font-style: italic;
+    color: var(--color-txt-error);
+}
+.container-lichsu__form{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+.form-capnhat{
+    border-radius: 5px;
+    /* border: 1px solid var(--color-black-gray); */
+    padding: 10px;
+    margin-bottom: 20px;
+    animation: grow ease 0.25s;
+    background-image: url(https://img.freepik.com/free-vector/handmade-whte-paper-texture_125540-947.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container-history-btn{
+    margin-top: 10px;
+    width: 200px;
+}
+.heading-label-text{
+    text-transform: capitalize;
+}

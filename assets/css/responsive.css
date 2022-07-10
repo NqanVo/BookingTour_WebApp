@@ -1,0 +1,122 @@
+/* Tren Mobile  */
+@media screen and (max-width: 600px){
+    /* banner  */
+    .slider{
+        max-height: 200px;
+        margin-bottom: -5px;
+    }
+    .slider-main{
+        max-height: 200px;
+    }
+    .btn-pre,.btn-next{
+        height: 50px;
+        width: 25px;
+        font-size: 2rem;
+    }
+    .input-df-date{
+        width: 100%;
+    }
+    .content__label{
+        margin-top: 5px;
+    }
+    .container__content{
+        margin-top: -10px;
+    }
+    .container-user{
+        margin-top: -10px;
+    }
+    .container_information-gruop-btn-item-liked{
+        display: inline-block;
+    }
+    /* header  */
+    .header,.fake-header{
+        display: none;
+    }
+    .header-mb{
+        display: block;
+    }
+    .header__list-mobile{
+        justify-content: space-around;
+    }
+    .header__list-item-mobile a{
+        font-size: 2.5rem;
+    }
+
+    /* log-in  */
+    .container-login__box{
+        position: inherit;
+        transform: translate(0,0);
+        width: auto; 
+    }
+
+    /* control-search  */
+    .form-control-input{
+        width: 100%;
+        margin: 5px 0;
+    }
+    .form-control-select{
+        width: 100%;
+        margin: 5px 0;
+    }
+    .form-control-btn{
+        margin-left: 0;
+        margin: 5px 0;
+        width: 100px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .content__label{
+        padding: 5px;
+        height: auto;
+    }
+    /* Chi tiet tour  */
+    .container-detail-heading-title{
+        margin-top: 5px;
+    }
+
+    /* Trang gio hang */
+    .container-cart{
+        margin-top: -5px;
+    }
+    .container-cart-status .arrow-steps.clearfix .step{
+        width: 32%;
+    }
+    .container-cart__tour{
+        flex-direction: column;
+    }
+    .container-cart__tour-img{
+        width: 100%;
+        height: 200px;
+    }
+    .container-cart__tour-group{
+        padding: 0;
+    }
+    .container-cart__control{
+        flex-direction: column;
+        width: 100%;
+    }
+    .container-cart__control-btn{
+        margin-bottom: 10px;
+    }
+    .container-cart__list{
+        overflow-x:auto;
+    }
+    .container-cart__list .table-custom{
+        width: 1000px;
+    }
+    table{
+        border-collapse: collapse;
+    }
+    .container-cart-btn{
+        margin-left: 25%;
+    }
+
+    /* Trang lich su tour */
+    .container-history{
+        overflow-x:auto;
+    }
+    .container-history .table-custom{
+        width: 1000px;
+    }
+
+}

@@ -1,0 +1,110 @@
+.container-cart{
+    background-color: var(--color-white);
+    margin: 5px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shawdown-02);
+    border-radius: 5px;
+    min-height: 650px;
+}
+.form-img{
+    width: 100%;
+    height: 500px;
+    background-image: url(https://img.freepik.com/free-vector/travel-stickers-badge-set_53876-100734.jpg?t=st=1655949432~exp=1655950032~hmac=ce083353c207026b90b2d4938a59d7556932d025079160fda119f28348f59a98&w=1380);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.container-cart__btn-back{
+    margin-bottom: 10px;
+    width: 20px;
+}
+.container-cart-status{
+    margin-bottom: 10px;
+}
+.container-cart__none{
+    width: 100%;
+    height: 500px;
+    background-image: url(https://img.freepik.com/free-vector/shopping-cart-with-shopping-bag-illustration_249405-124.jpg?w=1380);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container-cart__list{
+    margin-bottom: 10px;
+}
+.container-cart__tour{
+    width: 100%;
+    display: flex;
+    /* len mobile chuyen thanh cột  */
+    margin-bottom: 10px;
+}
+.container-cart__tour-img{
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.container-cart__tour-group{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.container-cart__tour-group-heading{
+    color: var(--color-main);
+    margin-bottom: 10px;
+}
+.container-cart__tour-group-heading-text{
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.container-cart__control{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.container-cart__control-text-child:hover a{
+    color: var(--color-txt-error);
+}
+
+/* form  */
+.container-cart__form{
+    
+}
+.form-tour{
+    display: none;
+    border-radius: 5px;
+    /* border: 1px solid var(--color-black-gray); */
+    padding: 10px;
+    margin-bottom: 20px;
+    animation: grow ease 0.25s;
+    background-image: url(https://img.freepik.com/free-vector/handmade-whte-paper-texture_125540-947.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.container-cart__form-group{
+    margin-bottom: 5px;
+}
+.container-cart__form-btn{
+    text-align: center;
+}
+.container-cart__form-btn-success{
+    background-color: var(--color-success);
+    color: var(--color-txt-success);
+    margin-top: 10px;
+}
+.container-cart__form-btn-error{
+    background-color: var(--color-error);
+    color: var(--color-txt-error);
+    width: 50%;
+}
+.container-cart__form-label{
+    font-weight: 700;
+}

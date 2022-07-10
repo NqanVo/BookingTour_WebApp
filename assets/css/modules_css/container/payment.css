@@ -1,0 +1,78 @@
+.container-cart__control-payment{
+    justify-content: left;
+}
+.container-cart__control-text-payment{
+    margin-right: 20px;
+}
+.container-cart__list-ticket{
+    width: 100%;
+}
+.container-cart__list-ticket-item{
+    margin-bottom: 5px;
+    min-height: 200px;
+    background-image: url(https://img.freepik.com/free-vector/handmade-whte-paper-texture_125540-947.jpg);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 4% 84%, 0 63%, 4% 46%, 0 26%, 5% 11%, 0 0);
+    box-shadow: var(--shawdown-y2-02);
+    padding: 10px 10px 10px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container-cart__list-ticket-item h3{
+    font-size: 1.5rem;
+}
+.container-cart__list-ticket-item-img{
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    box-shadow: var(--shawdown-02);
+}
+.container-cart__payment{
+    margin-bottom: 10px;
+}
+.container-cart__payment-group{
+   
+}
+.container-cart__payment-group-item label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.container-cart__payment-group-item-check, .container-cart__payment-group-item-label{
+    margin-right: 5px;
+}
+.container-cart__payment-group-item-img{
+    width: auto;
+    height: 30px;
+    object-fit: cover;
+}
+.container-cart__payment-group-item label:hover{
+    background-color: var(--color-minor);
+}
+
+
+/* payment done  */
+.container-cart-done{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-cart-done h3{
+    color: var(--color-main);
+    margin-bottom: 10px;
+}
+.container-cart-done p{
+    font-weight: 700;
+}
+.container-cart-done-img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+.container-cart-done a{
+    color: var(--color-white);
+}

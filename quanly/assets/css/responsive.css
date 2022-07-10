@@ -1,0 +1,58 @@
+@media screen and (max-width: 600px){
+    /* header  */
+    .header{
+        display: none;
+    }
+    .header-mb{
+        display: flex;
+    }
+    .input-df-date{
+        width: 100%;
+    }
+    .hero-container{
+        margin-top: 85px;
+    }
+    .content{
+        margin: 0;
+    }
+    .form-control{
+        display: flex;
+        flex-direction: column;
+    }
+    .form-control-input,
+    .form-control-select,
+    .form-control-btn{
+        margin: 5px 0;
+        width: 100%;
+    }
+    .content__body__heading{
+        flex-direction: column;
+    }
+    table{
+        border-collapse: collapse;
+    }
+    form{
+        overflow-x:auto;
+    }
+    .content__body__table{
+        width: 1000px;
+    }
+    /* trang danh sach tour  */
+    .content__body-item{
+        flex-direction: column;
+    }
+    .content__body-item:hover .content__body-item-img, .content__body-item-img{
+        clip-path: none;
+    }
+    .content__body-item-img{
+        width: 100%;
+    }
+
+    /* page login  */
+    .master-login__box{
+        width: 100%;
+    }
+    .master-login__box-heading{
+        font-size: 2.5rem;
+    }
+}
