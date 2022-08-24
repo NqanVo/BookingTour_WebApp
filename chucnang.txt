@@ -1,0 +1,26 @@
+Admin:
+	+Đăng nhập/Đăng xuất.
+	+Đăng nhập phân quyền.
+	+Quản lý ĐV: Xem-thêm-sửa-xóa (check trước khi xóa)
+		+Quản lý PB: Xem-thêm-sửa-xóa (check trước khi xóa)
+			+QL Nhân viên: Xem-thêm-sửa-xóa (check trước khi xóa)
+	+Quản lý Tour: Xem-thêm-sửa-xóa-tìm kiếm
+	+Quản lý các tour được đăng ký: Xem danh sách-xem chi tiết-download file danh sách người đăng ký
+	+Hỗ trợ kinh phí: Xem-Thêm-Sửa, xem danh sách người nhận hỗ trợ.
+		+Tiền hỗ trợ được phân chia theo thâm niên
+		+Nếu nhân viên không nhận hỗ trợ của kỳ này, sang kỳ sau không được cộng dồn
+		+Nếu nhân viên đã nhận hỗ trợ, nhưng hủy tour vào lúc vừa hết kì hỗ trợ, khi đặt lại sẽ không nhận được hỗ trợ (trừ khi có kì hỗ trợ mới được áp dụng)
+	+Thóng kê: Tour dk nhiều nhất, đơn vị dk nhiều nhất, tour mới thêm
+	+Download hướng dẩn sử dụng.
+
+User:
+	+Đăng nhập/Đăng xuất.
+	+Đã đăng nhập: Xem-Tìm kiếm-Đặt tour tour
+	+Quản lý lịch sử đặt tour của cá nhân: Xem-thêm-sửa-hủy
+	+Quản lý thông tin cá nhân: Xem-sửa
+	+Nếu tài khoản là quản lý: có mục chuyển đến trang Admin
+	+Xem kỳ hỗ trợ, tiền được hỗ trợ.
+	+Quản lý tour yêu thích: Thêm-xóa
+	+Download hướng dẩn sử dụng.
+
+Phù hợp trên các thiết bị: PC-Table-Mobile

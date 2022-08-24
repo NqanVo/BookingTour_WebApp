@@ -6,6 +6,6 @@
 }
 .container{
     display: block;
-    min-height: 650px;
+    min-height: calc(100vh - 200px);
     background-color: rgb(247, 247, 247);
 }

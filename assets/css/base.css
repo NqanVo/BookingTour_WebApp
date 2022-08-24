@@ -20,6 +20,10 @@ html{
 body{
     overflow-x: hidden;
 }
+.none{
+    display: none;
+}
+
 @keyframes grow{
     0%{
         transform:scale(0);
@@ -43,12 +47,23 @@ body{
 }
 
 :root{
+    /* color main  */
     --color-white: #fff;
     --color-black: #243236;
     --color-black-gray: #546368;
     --color-gray: #ebebeb;
     --color-main: #19CDF0;
     --color-minor: #C0FAFF;
+
+    /* color minor  */
+    /* --color-white: #fff;
+    --color-black: #000000;
+    --color-black-gray: #546368;
+    --color-gray: #DFE0DF;
+    --color-main: #C746FF;
+    --color-minor: #D3AEE0; */
+
+
     --color-success: #BAFFCB;
     --color-error:#fd9797;
     --color-warring: #EEED8C;

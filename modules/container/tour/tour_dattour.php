@@ -1,4 +1,9 @@
 <?php ob_start();
+    if(!isset($_SESSION['user_login']))
+    {
+        header('Location:index.php');
+    }
+
     use Carbon\Carbon;
     use Carbon\CarbonInterval;
     $today = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
@@ -62,8 +67,16 @@
             {
             ?>
             <div class="container-cart">
-                <a href="?select=tour&query=danhsach" class="btn-s btn-main container-cart__btn-back"><i
-                        class="ti-back-left"></i></a>
+                <div style="display:flex; align-item:center; gap:20px;">
+                    <a href="?select=tour&query=danhsach" class="btn-s btn-main container-cart__btn-back"><i
+                            class="ti-back-left"></i>    
+                    </a>
+                    <!-- <p style="display:flex; align-item:center; gap:10px;">
+                        <span>Danh sách</span>-
+                        <span>Chi tiết</span>-
+                        <span style="color:var(--color-main); font-weight:700">Giỏ hàng</span>
+                    </p> -->
+                </div>
                 <div class="container-cart-status">
                     <div class="arrow-steps clearfix">
                         <div class="step current"><span><a href="">Giỏ Hàng</a></span> </div>
@@ -80,8 +93,8 @@
                             <?php echo $tour_row['diadiem_tourdulich'] ?></p>
                         <p class="container-cart__tour-group-heading-text">Giá vé:
                             <?php echo number_format($tour_row['gia_tourdulich'],0,',',',')?> đ</p>
-                        <p class="container-cart__tour-group-heading-text">Số vé còn lại:
-                            <?php echo $soluong_conlai ?> </p>
+                        <!-- <p class="container-cart__tour-group-heading-text">Số vé còn lại:
+                            <?php echo $soluong_conlai ?> </p> -->
                     </div>
                 </div>
 
@@ -193,22 +206,26 @@
                                             class="input-df input-df-date container-cart__form-input disabled">
                                     </div>
                                     <div class="form-input container-cart__form-group">
-                                        <span class="container-cart__form-label">Họ tên:</span>
+                                        <span class="container-cart__form-label">Họ tên: <span class="error-txt">*</span></span>
                                         <input type="text" name="ten_ve" id="ten_ve" placeholder="Nhập họ tên..."
                                             class="input-df container-cart__form-input" required>
                                     </div>
                                     <div class="form-input container-cart__form-group">
-                                        <span class="container-cart__form-label">Số điện thoại:</span>
-                                        <input type="tel" name="sdt_ve" id="sdt_ve" placeholder="Nhập số điện thoại..."
+                                        <span class="container-cart__form-label">Số điện thoại: <span class="error-txt">*</span></span>
+                                        <input type="tel" name="sdt_ve" id="sdt_ve" maxlength="10" placeholder="Nhập số điện thoại..."
+                                                onkeypress="return isNumberKey(event);"
                                             class="input-df container-cart__form-input" required>
+                                        <span class="error-txt none" id="error-sdt">Số điện thoại không hợp lệ!</span>
+                                    
                                     </div>
                                     <div class="form-input container-cart__form-group">
-                                        <span class="container-cart__form-label">CCCD/CMND:</span>
-                                        <input type="number" name="cccd_ve" id="cccd_ve" placeholder="Nhập CCCD/CMND..."
+                                        <span class="container-cart__form-label">CCCD/CMND: <span class="error-txt">*</span></span> 
+                                        <input type="tel" name="cccd_ve" id="cccd_ve" maxlength="12" placeholder="Nhập CCCD/CMND..."  onkeypress="return isNumberKey(event);"
                                             class="input-df container-cart__form-input" required>
+                                        <span class="error-txt none" id="error-cccd">CCCD/CMND không hợp lệ!</span>
                                     </div>
                                     <div class="form-input container-cart__form-group">
-                                        <span class="container-cart__form-label">Giới tính:</span>
+                                        <span class="container-cart__form-label">Giới tính: <span class="error-txt">*</span></span>
                                         <select name="gioitinh_ve"
                                             class="input-df input-df-date container-cart__form-input">
                                             <option value="nam">Nam</option>
@@ -216,7 +233,7 @@
                                         </select>
                                     </div>
                                     <div class="form-input container-cart__form-group">
-                                        <span class="container-cart__form-label">Quan hệ:</span>
+                                        <span class="container-cart__form-label">Quan hệ: <span class="error-txt">*</span></span>
                                         <select name="quanhe_ve"
                                             class="input-df input-df-date container-cart__form-input">
                                             <!-- <option value="daidien">Đại diện</option> -->
@@ -224,7 +241,7 @@
                                         </select>
                                     </div>
                                     <div class="form-input container-cart__form-group container-cart__form-btn">
-                                        <input type="submit" name="luu_ve" value="Lưu Vé"
+                                        <input type="submit" name="luu_ve" id="btnsubmit" value="Lưu Vé"
                                             class="btn-s container-cart__form-btn-success"></input>
                                     </div>
                                 </div>

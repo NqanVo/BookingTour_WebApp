@@ -116,12 +116,12 @@ if(isset($_SESSION['dinhdang_chitiet'])){
                 <input type="number" name="gia_tour" value="<?php echo $tour_row['gia_tourdulich'] ?>"
                     class="input-df content__body-form-input">
             </div>
-            <div class="form-input content__body-form">
+            <!-- <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
                     Số lượng tối đa:
                 </h1>
                 <input type="number" name="soluongmax_tour" value="<?php echo $tour_row['soluongtoida_tourdulich'] ?>" class="input-df input-df-date content__body-form-input">
-            </div>
+            </div> -->
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
                     Tour cho đơn vị:

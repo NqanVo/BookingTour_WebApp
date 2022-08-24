@@ -54,6 +54,9 @@
                         elseif($quanly=='nhanvien' && $query=='sua'){
                             include('container/quanly_nhanvien/nhanvien_sua.php');
                         }
+                        elseif($quanly=='nhanvien' && $query=='suamatkhau'){
+                            include('container/quanly_nhanvien/nhanvien_suamatkhau.php');
+                        }
                         elseif($quanly=='nhanvien' && $query=='chitiet'){
                             include('container/quanly_nhanvien/nhanvien_chitiet.php');
                         }
@@ -102,6 +105,9 @@
                         }
                         elseif($quanly=='hotrokinhphi' && $query=='chitiet'){
                             include('container/quanly_hotrokinhphi/hotro_danhsach_chitiet.php');
+                        }
+                        elseif($quanly=='hotrokinhphi' && $query=='chitietnhanhotro'){
+                            include('container/quanly_hotrokinhphi/hotro_danhsach_danhanhotro.php');
                         }
                         elseif($quanly=='hotrokinhphi' && $query=='them_thamnien'){
                             include('container/quanly_hotrokinhphi/hotro_them_thamnien.php');

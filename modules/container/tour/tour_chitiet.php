@@ -24,9 +24,15 @@
 <div class="grid wide">
     <div class="container-detail">
         <div class="row">
-            <div class="col l-6 c-6">
+            <div class="col l-6 c-6" style="display:flex; align-item:center; gap:20px;">
                 <a href="?select=tour&query=danhsach" class="btn-s btn-main container-detail-btn-back"><i
-                        class="ti-back-left"></i></a>
+                        class="ti-back-left"></i>
+                </a>
+                <p style="display:flex; align-item:center; gap:10px;">
+                    <span>Trang chủ</span>-
+                    <span>Danh sách</span>-
+                    <span style="color:var(--color-main); font-weight:700">Chi tiết</span>
+                </p>
             </div>
             <div class="col l-6 c-6 right">
                 <p>Chi tiết tour</p>
@@ -38,7 +44,7 @@
             <div class="col l-6 c-12">
                 <div class="container-detail-heading">
                     <img src="quanly/modules/container/quanly_tour/uploads/<?php echo $tour_chitiet_row['img_tourdulich'] ?>"
-                        alt="" class="container-detail-heading-img">
+                        alt="" id="img-main" class="container-detail-heading-img">
                 </div>
             </div>
             <div class="col l-6 c-12">
@@ -55,23 +61,22 @@
                         <p class="container-detail-heading-group-text">Đăng ký trước:
                             <?php echo date("d/m/Y", strtotime($tour_chitiet_row['dangkytruoc_tourdulich'])); ?></p>
                         <p class="content__tour-item-group-text">Đã đăng ký:
-                            <?php echo $tour_chitiet_row['soluongdadangky_tourdulich'] ?> /
-                            <?php echo $tour_chitiet_row['soluongtoida_tourdulich'] ?>
+                            <?php echo $tour_chitiet_row['soluongdadangky_tourdulich'] ?>
                         <p class="container-detail-heading-group-text">Tour đơn vị:
                             <?php if($iddv_tour == 0){echo 'Tất cả';} else {echo $tour_donvi_row['ten_donvi'];} ?></p>
                     </div>
                     <div class="row">
                         <div class="col l-4 c-4">
-                            <img src="quanly/modules/container/quanly_tour/uploads/<?php echo $tour_chitiet_row['img_tourdulich'] ?>"
-                                class="container-detail-heading-img-mini">
+                            <img src="https://static.kinhtedothi.vn/images/upload/2022/03/24/halongnmoi.png"
+                                class="container-detail-heading-img-mini" id="1" onclick="changeImage('1')">
+                        </div>
+                        <div class="col l-4 c-4">
+                            <img src="http://baobariavungtau.com.vn/dataimages/202112/original/images1690461_vt.jpg"
+                                class="container-detail-heading-img-mini" id="2" onclick="changeImage('2')">
                         </div>
                         <div class="col l-4 c-4">
                             <img src="quanly/modules/container/quanly_tour/uploads/<?php echo $tour_chitiet_row['img_tourdulich'] ?>"
-                                class="container-detail-heading-img-mini">
-                        </div>
-                        <div class="col l-4 c-4">
-                            <img src="quanly/modules/container/quanly_tour/uploads/<?php echo $tour_chitiet_row['img_tourdulich'] ?>"
-                                class="container-detail-heading-img-mini">
+                                class="container-detail-heading-img-mini" id="3" onclick="changeImage('3')">
                         </div>
                     </div>
                     <?php 

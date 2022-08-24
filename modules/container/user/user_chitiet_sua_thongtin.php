@@ -1,5 +1,10 @@
 <?php
 ob_start();
+    if(!isset($_SESSION['user_login']))
+    {
+        header('Location:index.php');
+    }
+    
     if(isset($_POST['capnhat_thongtin'])){
         $ten = $_POST['ten_nhanvien'];
         $diachi = $_POST['diachi_nhanvien'];
@@ -47,32 +52,32 @@ ob_end_flush();
                                     <span class="container-cart__form-label">Tên nhân viên:</span>
                                     <input type="text" name="ten_nhanvien"
                                         value="<?php echo $nhanvien_row['ten_nhanvien'] ?>"
-                                        class="input-df container-cart__form-input">
+                                        class="input-df container-cart__form-input" required>
                                 </div>
                                 <div class="form-input container-cart__form-group">
                                     <span class="container-cart__form-label">Địa chỉ:</span>
                                     <input type="text" name="diachi_nhanvien"
                                         value="<?php echo $nhanvien_row['diachi_nhanvien'] ?>"
-                                        class="input-df container-cart__form-input">
+                                        class="input-df container-cart__form-input" required>
                                 </div>
                                 <div class="form-input container-cart__form-group">
                                     <span class="container-cart__form-label">SDT:</span>
-                                    <input type="number" name="sdt_nhanvien"
+                                    <input type="tel" name="sdt_nhanvien" maxlength="10"  onkeypress="return isNumberKey(event);"
                                         value="<?php echo $nhanvien_row['sdt_nhanvien'] ?>"
-                                        class="input-df container-cart__form-input">
+                                        class="input-df container-cart__form-input" required>
                                 </div>
                                 <div class="form-input container-cart__form-group">
                                     <span class="container-cart__form-label">Email:</span>
                                     <input type="email" name="email_nhanvien"
                                         value="<?php echo $nhanvien_row['email_nhanvien'] ?>"
-                                        class="input-df container-cart__form-input">
+                                        class="input-df container-cart__form-input" required>
                                 </div>
                                 <div class="form-input container-cart__form-group">
-                                    <span class="container-cart__form-label">CMND/CCCD:</span>
-                                    <input type="number" name="cccd_nhanvien"
-                                        value="<?php echo $nhanvien_row['cccd_nhanvien'] ?>"
-                                        class="input-df container-cart__form-input">
-                                </div>
+                                        <span class="container-cart__form-label">CCCD/CMND:</span>
+                                        <input type="tel" name="cccd_nhanvien" id="cccd_ve" maxlength="12" placeholder="Nhập CCCD/CMND..." onkeypress="return isNumberKey(event);" value="<?php echo $nhanvien_row['cccd_nhanvien'] ?>"
+                                            class="input-df container-cart__form-input" required>
+                                        <span class="error-txt none" id="error-cccd">CCCD/CMND không hợp lệ!</span>
+                                    </div>
                                 <div class="form-input container-cart__form-group">
                                     <span class="container-cart__form-label">Giới tính:</span>
                                     <select name="gioitinh_nhanvien"
@@ -92,7 +97,7 @@ ob_end_flush();
                                 </div>
                             </div>
 
-                            <input type="submit" name="capnhat_thongtin" value="Cập nhật" class="btn-m btn-main">
+                            <input type="submit" name="capnhat_thongtin" value="Cập nhật" id="btnsubmit" class="btn-m btn-main">
                         </form>
                     </div>
                 </div>

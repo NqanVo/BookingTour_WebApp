@@ -7,12 +7,6 @@
     $today = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
     $now_year = Carbon::now()->year;
     
-    // if(isset($_SERVER["HTTP_REFERER"])){
-    //     $url_back = $_SERVER["HTTP_REFERER"];
-    // }
-    // else{
-    //     $url_back = '';
-    // }
 
     //check update lại status hotro_kinhphi
     $check_status_hotro_count = mysqli_num_rows(mysqli_query($mysqli, "SELECT * FROM tbl_hotro_kinhphi WHERE status_hotro_kinhphi = '1' ORDER BY id_hotro_kinhphi DESC LIMIT 1"));
@@ -113,6 +107,10 @@
 
         $_SESSION['thongtin_user'] = array(array('id_donvi' => $iddv, 'id_phongban' => $idpb, 'id_nhanvien' => $idnv,'id_hotrokinhphi' => $id_hotrokinhphi, 'id_nhan_hotro' => $id_nhan_hotro,'thamnien' => $thamnien, 'tienhotro' => $tien_hotro));
     }
+    else{
+        header('Location:sign_in.php');
+    }
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">

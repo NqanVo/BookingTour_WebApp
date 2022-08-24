@@ -1,18 +1,24 @@
 <?php
- $tour_moi_select = "SELECT * FROM tbl_tourdulich ORDER BY id_tourdulich DESC";
- $tour_moi_query = mysqli_query($mysqli, $tour_moi_select);
 
- use Carbon\Carbon;
- use Carbon\CarbonInterval;
- $today = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
+use Carbon\Carbon;
+use Carbon\CarbonInterval;
+$today = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
+$tour_moi_select = "SELECT * FROM tbl_tourdulich WHERE dangkytruoc_tourdulich >= '".$today."' ORDER BY id_tourdulich DESC";
+$tour_moi_query = mysqli_query($mysqli, $tour_moi_select);
+
 ?>
 <div class="grid wide">
     <div class="container">
         <section class="container__content">
             <div class="row">
                 <div class="col l-12 c-12">
-                    <div class="content__label non-backgroud">
+                    <div class="content__label non-backgroud" style="display:flex; align-item:center; gap:20px;">
                         <a href="?select=tour&query=danhsach" class="btn-s btn-main"><i class="ti-back-left"></i></a>
+                        <p style="display:flex; align-item:center; gap:10px;">
+                            <span>Trang chủ</span>-
+                            <span>Danh sách</span>-
+                            <span style="color:var(--color-main); font-weight:700">Tour mới</span>
+                        </p>
                     </div>
                 </div>
                 <div class="col l-12 c-12">

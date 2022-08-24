@@ -10,7 +10,8 @@ $dangkytruoc_tour = $_POST['dangkytruoc_tour'];
 $ngaydi_tour = $_POST['ngaydi_tour'];
 $ngayve_tour = $_POST['ngayve_tour'];
 $gia_tour = $_POST['gia_tour'];
-$soluongmax_tour = $_POST['soluongmax_tour'];
+// $soluongmax_tour = $_POST['soluongmax_tour'];
+$soluongmax_tour = '2147483647';
 $donvi_tour = $_POST['donvi_tour'];
 
 $img_tour = $_FILES['img_tour']['name'];

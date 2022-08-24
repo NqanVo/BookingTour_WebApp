@@ -56,7 +56,8 @@ if(isset($_POST['themnv'])){
                 <h1 class="content__body-form-text">
                     Số điện thoại: <span class="error-txt">*</span>
                 </h1>
-                <input type="number" name="sdt_nv" class="input-df content__body-form-input" required>
+                <input type="tel" name="sdt_nv" id="sdt_nv" maxlength="10" class="input-df content__body-form-input"  onkeypress="return isNumberKey(event);" required>
+                <span class="error-txt none" id="error-sdt">Số điện thoại không hợp lệ!</span>
             </div>
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
@@ -74,7 +75,8 @@ if(isset($_POST['themnv'])){
                 <h1 class="content__body-form-text">
                     CCCD/CMND: <span class="error-txt">*</span>
                 </h1>
-                <input type="number" name="cccd_nv" class="input-df content__body-form-input" required>
+                <input type="tel" name="cccd_nv" id="cccd_nv" maxlength="12" class="input-df content__body-form-input"  onkeypress="return isNumberKey(event);" required>
+                <span class="error-txt none" id="error-cccd">CCCD/CMND không hợp lệ!</span>
             </div>
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
@@ -133,7 +135,7 @@ if(isset($_POST['themnv'])){
                     </option>
                 </select>
             </div>
-            <input type="submit" name="themnv" value="Thêm" class="btn-m btn-main content__body-btn"></input>
+            <input type="submit" name="themnv" id="btnsubmit" value="Thêm" class="btn-m btn-main content__body-btn"></input>
         </div>
     </div>
 </form>

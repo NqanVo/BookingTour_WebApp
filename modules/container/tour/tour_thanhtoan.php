@@ -1,4 +1,9 @@
 <?php
+    if(!isset($_SESSION['user_login']))
+    {
+        header('Location:index.php');
+    }
+
     if(isset($_SESSION['ticket'])){
         $tongnguoi = 0;
         $tongtien = 0;

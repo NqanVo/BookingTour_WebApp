@@ -56,6 +56,8 @@ if(isset($_GET['quanly']) && $_GET['query'] == 1)
     <script src="//cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="./assets/font-icon/themify-icons/themify-icons.css">
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3125/3125848.png">
     <link rel="stylesheet" href="./assets/css/base.css">
@@ -81,9 +83,12 @@ if(isset($_GET['quanly']) && $_GET['query'] == 1)
         ?>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./assets/javascript/javascript.js"></script>
     <script src="./assets/javascript/api.js"></script>
     <script src="./assets/javascript/data.json"></script>
+    <script type="text/javascript" src="./assets/javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/javascript/Chart.min.js"></script>
 </body>
 </html>

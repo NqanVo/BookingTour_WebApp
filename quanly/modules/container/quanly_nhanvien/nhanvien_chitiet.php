@@ -25,8 +25,8 @@ $nhanvien_row = mysqli_fetch_array($nhanvien_query);
 </div>
 
 <form method="POST" action="">
-    <div class="row content__body__master">
-        <div class="col l-12 c-12">
+    <div class="row content__body__master content__body__master-info">
+        <div class="col l-4 c-12">
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
                     Tên nhân viên
@@ -56,7 +56,6 @@ $nhanvien_row = mysqli_fetch_array($nhanvien_query);
                     CCCD/CMND
                 </h1>
                 <p class="input-df content__body-form-input"><?php echo $nhanvien_row['cccd_nhanvien']?></p>
-
             </div>
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
@@ -83,28 +82,30 @@ $nhanvien_row = mysqli_fetch_array($nhanvien_query);
                 <input type="date" name="ngayvaolam_nv" value="<?php echo $nhanvien_row['ngayvaolam_nhanvien']?>"
                     class="input-df input-df-date content__body-form-input" disabled>
             </div>
+        </div>
+        <div class="col l-4 c-12">
+            <div class="form-input content__body-form">
+                <h1 class="content__body-form-text">
+                    Phòng
+                </h1>
+                <p class="input-df content__body-form-input"><?php echo $phongban_row['ten_phongban']?></p>
 
+            </div>
+            
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
                     Chức vụ
                 </h1>
-                <select name="chucvu_nv" class="input-df input-df-date content__body-form-input" disabled>
                     <?php 
                     if($nhanvien_row['chucvu_nhanvien'] == '0')
                     {
-                        echo '<option value="0" selected="">Quản lý</option>
-                        <option value="1">Tổ trưởng</option>
-                        <option value="2">Nhân viên</option>';
+                        echo '<p class="input-df content__body-form-input">Quản lý</p>';
                     }
                     elseif($nhanvien_row['chucvu_nhanvien'] == '1'){
-                        echo '<option value="0">Quản lý</option>
-                        <option value="1" selected="">Tổ trưởng</option>
-                        <option value="2">Nhân viên</option>';
+                        echo '<p class="input-df content__body-form-input">Tổ trưởng</p>';
                     }
                     elseif($nhanvien_row['chucvu_nhanvien'] == '2'){
-                        echo '<option value="0">Quản lý</option>
-                        <option value="1">Tổ trưởng</option>
-                        <option value="2" selected="">Nhân viên</option>';
+                        echo '<p class="input-df content__body-form-input">Nhân viên</p>';
                     }
                     ?>
                 </select>
@@ -121,29 +122,23 @@ $nhanvien_row = mysqli_fetch_array($nhanvien_query);
                 <h1 class="content__body-form-text">
                     Trạng thái:
                 </h1>
-                <select name="status_nv" class="input-df input-df-date content__body-form-input" disabled>
                     <?php 
                     if($nhanvien_row['status_nhanvien'] == '1')
                     {
-                        echo '<option value="1" selected="">Hoạt động</option>
-                        <option value="0">Ngừng hoạt động</option>';
+                        echo '<p class="input-df content__body-form-input">Hoạt động</p>';
+
                     }
                     else
                     {
-                        echo '<option value="1">Hoạt động</option>
-                        <option value="0" selected="">Ngừng hoạt động</option>';
+                        echo '<p class="input-df content__body-form-input">Dừng hoạt động</p>';
+
                     }
                     ?>
                 </select>
             </div>
-            <div class="form-input content__body-form">
-                <h1 class="content__body-form-text">
-                    Phòng
-                </h1>
-                <p class="input-df content__body-form-input"><?php echo $phongban_row['ten_phongban']?></p>
-
-            </div>
-
+            
+        </div>
+        <div class="col l-4 c-12">
         </div>
     </div>
 </form>

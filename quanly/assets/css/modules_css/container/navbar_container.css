@@ -22,15 +22,15 @@
     list-style: none;
     font-size: 1.6rem;
     transition: 0.25s;
+    transition: 0.25s;
 }
 .sub-navbar__list,
 .sub2-navbar__list,
 .sub3-navbar__list{
     display: none;
     list-style: none;
-    position: absolute;
     top: 0;
-    left: 100%;
+    left: 0;
     z-index: 1;
     width: 100%;
     padding: 0 10px;
@@ -38,12 +38,6 @@
     transition: 0.25s;
     box-shadow: var(--shawdown-02);
     border-radius: 4px;
-}
-.sub-navbar__list{
-}
-.sub2-navbar__list{
-}
-.sub3-navbar__list{
 }
 .navbar__list-item:hover .sub-navbar__list,
 .sub-navbar__list-item:hover .sub2-navbar__list,
@@ -55,7 +49,6 @@
 .sub-navbar__list-item,
 .sub2-navbar__list-item,
 .sub3-navbar__list-item{
-    position: relative;
     padding: 8px 0;
     border-bottom: 1px solid var(--color-minor);
     transition: 0.25s;
@@ -65,7 +58,8 @@
 .sub-navbar__list-item-link:hover,
 .sub2-navbar__list-item-link:hover,
 .sub3-navbar__list-item-link:hover{
-    opacity: 0.8;
+    /* opacity: 0.8; */
+    font-weight: 600;
 }
 
 .navbar__list-item-link,
@@ -76,4 +70,3 @@
     text-decoration: none;
     color: var(--color-black);
 }
-

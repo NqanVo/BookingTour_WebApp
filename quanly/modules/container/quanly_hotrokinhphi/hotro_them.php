@@ -9,7 +9,8 @@
     if(isset($_POST['themhotro'])){
         $tunam = $_POST['tunam_hotro'];
         $dennam = $_POST['dennam_hotro'];
-        $tongtien = $_POST['tongtien_hotro'];
+        // $tongtien = $_POST['tongtien_hotro'];
+        $tongtien = '2147483647';
         if($hotro_kinhphi_count == 0)
         {
             if(($tunam < $now_year) || ($dennam < $now_year))
@@ -53,12 +54,12 @@
                 </h1>
                 <input type="number" name="dennam_hotro" min="1900" max="2099" step="1" value="<?php echo $now_year_plus?>" class="input-df input-df-date content__body-form-input">
             </div>
-            <div class="form-input content__body-form">
+            <!-- <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
                     Tổng Tiền Hỗ Trợ: <span class="error-txt">*</span>
                 </h1>
                 <input type="number" name="tongtien_hotro" class="input-df content__body-form-input" required>
-            </div>
+            </div> -->
             <input type="submit" name="themhotro" value="Thêm" class="btn-m btn-main content__body-btn"></input>
         </div>
     </div>

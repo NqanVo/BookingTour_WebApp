@@ -1,4 +1,9 @@
 <?php
+    if(!isset($_SESSION['user_login']))
+    {
+        header('Location:index.php');
+    }
+
     if($nhanvien_row['gioitinh_nhanvien'] == 'nam'){
         $gioitinh_nhanvien_ucfirst = 'Nam';
     }

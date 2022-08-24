@@ -21,9 +21,9 @@
                 <td>Mã Tour</td>
                 <td>Tên Tour</td>
                 <td>Giá Vé</td>
-                <td>Vé Tối Đa</td>
                 <td>Đã Đăng Ký</td>
-                <td>Vé còn lại</td>
+                <!-- <td>Vé Tối Đa</td>
+                <td>Vé còn lại</td> -->
                 <td>Tổng Tiền</td>             
                 <td>Danh Sách Đăng Ký</td>
                 <td>Download danh sách</td>
@@ -49,11 +49,11 @@
             ?>
             <tr>
                 <td><?php echo $tour_row['id_tourdulich'] ?></td>
-                <td><a href="?quanly=tour&query=chitiet&idtour=<?php echo $id_tour?>" class="a-defaul icon-s"><?php echo $tour_row['ten_tourdulich'] ?></a></td>
+                <td><a href="?quanly=tour&query=chitiet&idtour=<?php echo $id_tour?>" class="a-defaul"><?php echo $tour_row['ten_tourdulich'] ?></a></td>
                 <td><?php echo number_format($tour_row['gia_tourdulich'],0,',',',')?>đ</td>
-                <td><?php echo $tour_row['soluongtoida_tourdulich'] ?></td>
                 <td><?php echo $tongdk_row['count(id_dangkytour_chitiet)'] ?></td>
-                <td><?php echo $veconlai ?></td>
+                <!-- <td><?php echo $tour_row['soluongtoida_tourdulich'] ?></td>
+                <td><?php echo $veconlai ?></td> -->
                 <td><?php echo number_format($tongtien_row['SUM(thanhtien_dangkytour_chitiet)'],0,',',',')?>đ</td>
                 <td><a href="?quanly=tour&query=danhsachdangky_chitiet&idtour=<?php echo $id_tour?>" class="a-defaul">
                         <i class="icon-s ti-eye"></i>

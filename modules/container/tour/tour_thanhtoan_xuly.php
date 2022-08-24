@@ -9,6 +9,7 @@
     //lay thong tin user
     foreach($_SESSION['thongtin_user'] as $key => $value){
         $idnv = $value['id_nhanvien'];
+        $iddv = $value['id_donvi'];
         $id_hotrokinhphi = $value['id_hotrokinhphi'];
         $tienhotro = $value['tienhotro'];
     }
@@ -48,7 +49,7 @@
         $ngayve_tour = $tour_row['ngayve_tourdulich'];
 
         //them dangkytour
-        $dangkytour_insert = "INSERT INTO `tbl_dangkytour`(`id_nhanvien`, `id_tourdulich`, `tentour_dangkytour`, `ngaydi_dangkytour`, `ngayve_dangkytour`, `ngaydangky_dangkytour`, `soluong_dangkytour`) VALUES ('".$idnv."','".$idtour."','".$ten_tour."','".$ngaydi_tour."','".$ngayve_tour."','".$today."','".$tongnguoi."')";
+        $dangkytour_insert = "INSERT INTO `tbl_dangkytour`(`id_donvi`, `id_nhanvien`, `id_tourdulich`, `tentour_dangkytour`, `ngaydi_dangkytour`, `ngayve_dangkytour`, `ngaydangky_dangkytour`, `soluong_dangkytour`) VALUES ('".$iddv."','".$idnv."','".$idtour."','".$ten_tour."','".$ngaydi_tour."','".$ngayve_tour."','".$today."','".$tongnguoi."')";
         $dangkytour_query = mysqli_query($mysqli, $dangkytour_insert);
 
         //tim id_dangkytour vua tao

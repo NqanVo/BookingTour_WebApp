@@ -95,12 +95,12 @@ if(isset($_SESSION['dinhdang_chitiet'])){
                 </h1>
                 <input type="number" name="gia_tour" class="input-df content__body-form-input" required>
             </div>
-            <div class="form-input content__body-form">
+            <!-- <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
                     Số lượng tối đa: <span class="error-txt">*</span>
                 </h1>
                 <input type="number" name="soluongmax_tour" class="input-df input-df-date content__body-form-input" required>
-            </div>
+            </div> -->
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
                     Tour cho đơn vị: <span class="error-txt">*</span>
@@ -121,13 +121,13 @@ if(isset($_SESSION['dinhdang_chitiet'])){
                 <h1 class="content__body-form-text">
                     Ảnh nền (PNG/JPG/JPEG): <span class="error-txt">*</span>
                 </h1>
-                <input type="file" name="img_tour" class="input-df content__body-form-input" required>
+                <input type="file" name="img_tour" accept="image/png, image/jpg, image/jpeg" class="input-df content__body-form-input" required>
             </div>
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
                     Chi tiết tour (PDF): <span class="error-txt">*</span>
                 </h1>
-                <input type="file" name="chitiet_tour" class="input-df content__body-form-input" required>
+                <input type="file" name="chitiet_tour" accept=".pdf" class="input-df content__body-form-input" required>
             </div>
             <input type="submit" name="themtour" value="Tạo Tour"
                 class="btn-m btn-main success-bg-txt content__body-btn"></input>

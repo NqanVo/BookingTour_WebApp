@@ -19,7 +19,7 @@ if(isset($_SESSION['user_login'])){
             <div class="row">
                 <div class="col l-12 c-12">
                     <div class="content__label">
-                        <h3 class="content__label-heading">Tour Thuộc Đơn Vị Bạn: <i class="fa-solid fa-tag"></i></h3>
+                        <h3 class="content__label-heading">Tour Thuộc Đơn Vị Bạn: <img src="https://media.baamboozle.com/uploads/images/417119/1625283301_20905_gif-url.gif" width="20px" alt=""></h3>
                     </div>
                 </div>
             </div>
@@ -94,8 +94,7 @@ if(isset($_SESSION['user_login'])){
                                             <?php echo date("d/m/Y", strtotime($tour_theo_donvi_row['dangkytruoc_tourdulich'])); ?>
                                         </p>
                                         <p class="content__tour-item-group-text">Đã đăng ký:
-                                            <?php echo $tour_theo_donvi_row['soluongdadangky_tourdulich'] ?> /
-                                            <?php echo $tour_theo_donvi_row['soluongtoida_tourdulich'] ?>
+                                            <?php echo $tour_theo_donvi_row['soluongdadangky_tourdulich'] ?>
                                         <div class="content__tour-item-group-btn">
                                             <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_theo_donvi_row['id_tourdulich'] ?>"
                                                 class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -119,6 +118,7 @@ if(isset($_SESSION['user_login'])){
 
                 <div class="col l-12 c-12">
                     <div class="content__label center">
+                        <!-- <a href="?select=tour&query=donviall" class="btn-s btn-main">Xem thêm</a> -->
                         <a href="?select=tour&query=donviall" class="btn-s btn-main">Xem thêm</a>
                     </div>
                 </div>
@@ -139,7 +139,7 @@ if(isset($_SESSION['user_login'])){
             <div class="row">
                 <div class="col l-12 c-12">
                     <div class="content__label">
-                        <h3 class="content__label-heading">Tour Mới: <i class="fa-brands fa-hotjar"></i></h3>
+                        <h3 class="content__label-heading">Tour Mới: <img src="https://media.giphy.com/media/ABO6I7bS3abio/source.gif" width="50px" height="20px" alt=""></h3>
                     </div>
                 </div>
             </div>
@@ -215,8 +215,7 @@ if(isset($_SESSION['user_login'])){
                                     <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                 </p>
                                 <p class="content__tour-item-group-text">Đã đăng ký:
-                                    <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                    <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                    <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
                                 <div class="content__tour-item-group-btn">
                                     <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                         class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -253,8 +252,7 @@ if(isset($_SESSION['user_login'])){
                                     <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                 </p>
                                 <p class="content__tour-item-group-text">Đã đăng ký:
-                                    <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                    <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                    <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
                                 <div class="content__tour-item-group-btn">
                                     <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                         class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>

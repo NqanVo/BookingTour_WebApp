@@ -1,4 +1,9 @@
 <?php
+    if(!isset($_SESSION['user_login']))
+    {
+        header('Location:index.php');
+    }
+
     if(isset($_POST['capnhat_matkhau']))
     {
         $matkhaucu = md5($_POST['matkhaucu_nhanvien']);

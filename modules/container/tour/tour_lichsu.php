@@ -1,4 +1,9 @@
 <?php
+    if(!isset($_SESSION['user_login']))
+    {
+        header('Location:index.php');
+    }
+    
     use Carbon\Carbon;
     use Carbon\CarbonInterval;
     $today = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();

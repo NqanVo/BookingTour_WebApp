@@ -1,4 +1,9 @@
 <?php
+    if(!isset($_SESSION['user_login']))
+    {
+        header('Location:index.php');
+    }
+
     use Carbon\Carbon;
     use Carbon\CarbonInterval;
     $today = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
@@ -111,12 +116,12 @@
                                     </div>
                                     <div class="form-input container-cart__form-group">
                                         <span class="container-cart__form-label">Số điện thoại:</span>
-                                        <input type="tel" name="sdt_ve" id="sdt_ve" placeholder="Nhập số điện thoại..."
+                                        <input type="tel" name="sdt_ve" id="sdt_ve" placeholder="Nhập số điện thoại..." maxlength="10"  onkeypress="return isNumberKey(event);"
                                             class="input-df container-cart__form-input" required>
                                     </div>
                                     <div class="form-input container-cart__form-group">
                                         <span class="container-cart__form-label">CCCD/CMND:</span>
-                                        <input type="number" name="cccd_ve" id="cccd_ve" placeholder="Nhập cccd/cmnd..."
+                                        <input type="tel" name="cccd_ve" maxlength="12" id="cccd_ve" placeholder="Nhập cccd/cmnd..."   onkeypress="return isNumberKey(event);"
                                             class="input-df container-cart__form-input" required>
                                     </div>
                                     <div class="form-input container-cart__form-group">

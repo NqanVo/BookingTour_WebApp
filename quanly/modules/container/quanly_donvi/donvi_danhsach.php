@@ -1,5 +1,19 @@
-<?php 
-$donvi_select = "SELECT * FROM tbl_donvi";
+<?php
+if(isset($_GET['page'])){
+    $page = $_GET['page'];
+    $page_view = $_GET['page'];
+}
+else{
+    $page = 0;
+    $page_view = 1;
+}
+if($page == 1 || $page == 0){
+    $page = 0;
+}
+else{
+    $page = ($page * 5) - 5;
+}
+$donvi_select = "SELECT * FROM tbl_donvi ORDER BY id_donvi LIMIT $page,5";
 $donvi_query = mysqli_query($mysqli, $donvi_select);
 
 if(isset($_SESSION['phongban_isset'])){
@@ -36,7 +50,7 @@ if(isset($_SESSION['phongban_isset'])){
             </tr>
         </thead>
         <tbody>
-            <?php $i = 0;
+            <?php $i = $page;
 
                 while($donvi_row = mysqli_fetch_array($donvi_query))
                 {
@@ -70,3 +84,26 @@ if(isset($_SESSION['phongban_isset'])){
         </tbody>
     </table>
 </form>
+<div class="content__body__desc page-form" style="margin-top: 20px;">
+<h5>Trang: <?php echo $page_view ?></h5>
+<?php
+    $donvi_select_page = "SELECT * FROM tbl_donvi";
+    $donvi_query_page = mysqli_query($mysqli, $donvi_select_page);
+    $count = mysqli_num_rows($donvi_query_page);
+    if($count == 0){
+        $trang = 1;
+    }
+    else{
+        $trang = ceil($count / 5);
+    }
+?>
+    <ul class="next-page">
+        <?php
+            for($i =1; $i <= $trang; $i++){
+                ?>
+                    <li class="next-page-item"><a href="?quanly=donvi&query=danhsach&page=<?php echo $i ?>" class="a-defaul next-page-link"><?php echo $i ?></a></li>
+                <?php
+            }
+        ?>
+    </ul>
+</div>

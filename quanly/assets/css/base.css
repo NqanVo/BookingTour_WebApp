@@ -19,11 +19,18 @@ html{
         opacity: 1;
     }
 }
+.none{
+    display: none;
+}
 body{
     overflow-x: hidden;
 }
 .disabled{
     pointer-events:none;
+}
+.disabled-btn{
+    pointer-events:none;
+    opacity: 0.5;
 }
 :root{
     --color-white: #fff;

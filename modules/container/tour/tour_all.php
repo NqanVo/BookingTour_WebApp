@@ -1,10 +1,12 @@
 <?php
- $tour_moi_select = "SELECT * FROM tbl_tourdulich ORDER BY id_tourdulich DESC";
- $tour_moi_query = mysqli_query($mysqli, $tour_moi_select);
+ 
 
  use Carbon\Carbon;
 use Carbon\CarbonInterval;
 $today = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
+
+$tour_moi_select = "SELECT * FROM tbl_tourdulich WHERE dangkytruoc_tourdulich >= '".$today."' ORDER BY id_tourdulich DESC";
+$tour_moi_query = mysqli_query($mysqli, $tour_moi_select);
 
 ?>
 <div class="grid wide">
@@ -12,8 +14,12 @@ $today = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
         <section class="container__content">
             <div class="row">
                 <div class="col l-12 c-12">
-                    <div class="content__label non-backgroud">
+                    <div class="content__label non-backgroud" style="display:flex; align-item:center; gap:20px;">
                         <a href="?" class="btn-s btn-main"><i class="ti-back-left"></i></a>
+                        <p style="display:flex; align-item:center; gap:10px;">
+                            <span>Trang chủ</span>-
+                            <span style="color:var(--color-main); font-weight:700">Danh sách</span>
+                        </p>
                     </div>
                 </div>
                 <div class="col l-12 c-12">
@@ -92,8 +98,7 @@ $today = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
                                             <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                         </p>
                                         <p class="content__tour-item-group-text">Đã đăng ký:
-                                            <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                            <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                            <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
                                         <div class="content__tour-item-group-btn">
                                             <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                                 class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>

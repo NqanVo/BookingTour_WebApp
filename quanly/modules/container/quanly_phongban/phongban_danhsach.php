@@ -1,11 +1,28 @@
 <?php 
 $iddv = $_GET['iddv'];
-$phongban_select = "SELECT * FROM tbl_phongban WHERE tbl_phongban.id_donvi = $iddv";
+
+if(isset($_GET['page'])){
+    $page = $_GET['page'];
+    $page_view = $_GET['page'];
+}
+else{
+    $page = 0;
+    $page_view = 1;
+}
+if($page == 1 || $page == 0){
+    $page = 0;
+}
+else{
+    $page = ($page * 5) - 5;
+}
+
+$phongban_select = "SELECT * FROM tbl_phongban WHERE tbl_phongban.id_donvi = $iddv LIMIT $page,5";
 $phongban_query = mysqli_query($mysqli, $phongban_select);
 
 $donvi_select = "SELECT * FROM tbl_donvi WHERE tbl_donvi.id_donvi = $iddv";
 $donvi_query = mysqli_query($mysqli, $donvi_select);
 $donvi_row = mysqli_fetch_array($donvi_query);
+
 
 
 if(isset($_SESSION['nhanvien_isset'])){
@@ -42,7 +59,7 @@ if(isset($_SESSION['nhanvien_isset'])){
         </thead>
         <tbody>
             <?php 
-            $i = 0;
+            $i = $page;
             
                 while($phongban_row = mysqli_fetch_array($phongban_query))
                 {
@@ -74,3 +91,28 @@ if(isset($_SESSION['nhanvien_isset'])){
         </tbody>
     </table>
 </form>
+
+<div class="content__body__desc page-form" style="margin-top: 20px;">
+<h5>Trang: <?php echo $page_view ?></h5>
+<?php
+    $donvi_select_page = "SELECT * FROM tbl_phongban WHERE id_donvi = '".$iddv."'";
+    $donvi_query_page = mysqli_query($mysqli, $donvi_select_page);
+    $count = mysqli_num_rows($donvi_query_page);
+    if($count == 0){
+        $trang = 1;
+    }
+    else{
+        $trang = ceil($count / 5);
+    }
+
+?>
+    <ul class="next-page">
+        <?php
+            for($i =1; $i <= $trang; $i++){
+                ?>
+                    <li class="next-page-item"><a href="?quanly=phongban&query=danhsach&iddv=<?php echo $iddv?>&page=<?php echo $i ?>" class="a-defaul next-page-link"><?php echo $i ?></a></li>
+                <?php
+            }
+        ?>
+    </ul>
+</div>

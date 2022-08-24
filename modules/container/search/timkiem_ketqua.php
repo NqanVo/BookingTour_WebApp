@@ -41,7 +41,7 @@
                 </div>
                 <div class="col l-12 c-12">
                     <div class="content__label">
-                        <h3 class="content__label-heading">Kết quả tìm kiếm: <?php echo $keyword?>. <?php echo $donvi_view?>. <?php echo $diadiem_view?> <i class="fa-solid fa-magnifying-glass"></i></h3>
+                        <h3 class="content__label-heading" style="display:flex; align-item: center; gap:10px">Tìm kiếm: <?php echo $keyword?>. <?php echo $donvi_view?>. <?php echo $diadiem_view?>  <i class="fa-solid fa-magnifying-glass"></i></h3>
                     </div>
                 </div>
             </div>
@@ -139,8 +139,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -193,8 +193,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -300,8 +300,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -354,8 +354,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -461,8 +461,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -515,8 +515,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -622,8 +622,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -676,8 +676,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -783,8 +783,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -837,8 +837,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -944,8 +944,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -998,8 +998,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -1105,8 +1105,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -1159,8 +1159,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -1266,8 +1266,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>
@@ -1320,8 +1320,8 @@
                                         <?php echo date("d/m/Y", strtotime($tour_moi_row['dangkytruoc_tourdulich'])); ?>
                                     </p>
                                     <p class="content__tour-item-group-text">Đã đăng ký:
-                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?> /
-                                        <?php echo $tour_moi_row['soluongtoida_tourdulich'] ?>
+                                        <?php echo $tour_moi_row['soluongdadangky_tourdulich'] ?>
+                                        
                                     <div class="content__tour-item-group-btn">
                                         <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_moi_row['id_tourdulich'] ?>"
                                             class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>

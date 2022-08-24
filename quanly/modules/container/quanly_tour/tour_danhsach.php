@@ -92,8 +92,7 @@ $tour_query = mysqli_query($mysqli, $tour_select);
                     </p>
                     <p class="content__body-item-group-text">
                         <i class="fa-solid fa-ticket"></i>
-                        <span> Số lượng: <?php echo $tour_row['soluongdadangky_tourdulich'] ?> /
-                            <?php echo $tour_row['soluongtoida_tourdulich'] ?></span>
+                        <span> Số lượng đã đăng ký: <?php echo $tour_row['soluongdadangky_tourdulich'] ?></span>
                     </p>
                 </div>
             </a>

@@ -1,4 +1,8 @@
 <?php
+    if(!isset($_SESSION['user_login']))
+    {
+        header('Location:index.php');
+    }
 
     $iddangkytour = $_GET['iddangkytour'];
     $dangkytour_chitiet_select = "SELECT * FROM tbl_dangkytour_chitiet WHERE tbl_dangkytour_chitiet.id_dangkytour = '".$iddangkytour."'";

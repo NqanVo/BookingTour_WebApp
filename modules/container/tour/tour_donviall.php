@@ -1,19 +1,25 @@
 <?php
-  $tour_theo_donvi_select = "SELECT * FROM tbl_tourdulich WHERE tbl_tourdulich.donvi_tourdulich = '".$iddv."'";
+ use Carbon\Carbon;
+ use Carbon\CarbonInterval;
+ $today = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
+  $tour_theo_donvi_select = "SELECT * FROM tbl_tourdulich WHERE tbl_tourdulich.donvi_tourdulich = '".$iddv."' AND dangkytruoc_tourdulich >= '".$today."'";
   $tour_theo_donvi_query = mysqli_query($mysqli, $tour_theo_donvi_select);
 
-  use Carbon\Carbon;
-  use Carbon\CarbonInterval;
-  $today = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
 ?>
 <div class="grid wide">
     <div class="container">
         <section class="container__content">
             <div class="row">
                 <div class="col l-12 c-12">
-                    <div class="content__label non-backgroud">
+                    <div class="content__label non-backgroud" style="display:flex; align-item:center; gap:20px;">
                         <a href="?select=tour&query=danhsach" class="btn-s btn-main"><i class="ti-back-left"></i></a>
+                        <p style="display:flex; align-item:center; gap:10px;">
+                            <span>Trang chủ</span>-
+                            <span>Danh sách</span>-
+                            <span style="color:var(--color-main); font-weight:700">Tour đơn vị</span>
+                        </p>
                     </div>
+                    
                 </div>
                 <div class="col l-12 c-12">
                     <div class="content__label">
@@ -91,8 +97,7 @@
                                     <?php echo date("d/m/Y", strtotime($tour_theo_donvi_row['dangkytruoc_tourdulich'])); ?>
                                 </p>
                                 <p class="content__tour-item-group-text">Đã đăng ký:
-                                    <?php echo $tour_theo_donvi_row['soluongdadangky_tourdulich'] ?> /
-                                    <?php echo $tour_theo_donvi_row['soluongtoida_tourdulich'] ?>
+                                    <?php echo $tour_theo_donvi_row['soluongdadangky_tourdulich'] ?>
                                 <div class="content__tour-item-group-btn">
                                     <a href="?select=tour&query=chitiet&idtour=<?php echo $tour_theo_donvi_row['id_tourdulich'] ?>"
                                         class="btn-s content__tour-item-group-btn-link">Xem chi tiết</a>

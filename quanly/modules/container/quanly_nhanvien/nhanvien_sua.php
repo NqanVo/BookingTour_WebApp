@@ -42,42 +42,44 @@ if(isset($_POST['suanv'])){
 </div>
 
 <form method="POST" action="">
-    <div class="row content__body__master">
-        <div class="col l-12 c-12">
+    <div class="row content__body__master content__body__master-info">
+        <div class="col l-4 c-12">
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
                     Tên nhân viên
                 </h1>
                 <input type="text" name="ten_nv" value="<?php echo $nhanvien_row['ten_nhanvien']?>"
-                    class="input-df content__body-form-input">
+                    class="input-df content__body-form-input" required>
             </div>
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
                     Số điện thoại
                 </h1>
-                <input type="number" name="sdt_nv" value="<?php echo $nhanvien_row['sdt_nhanvien']?>"
-                    class="input-df content__body-form-input">
+                <input type="tel" name="sdt_nv" id="sdt_nv" pattern="\d*" minlength="10" maxlength="10"  onkeypress="return isNumberKey(event);" value="<?php echo $nhanvien_row['sdt_nhanvien']?>"
+                    class="input-df content__body-form-input" required>
+                <span class="error-txt none" id="error-sdt">Số điện thoại không hợp lệ!</span>
             </div>
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
                     Địa chỉ
                 </h1>
                 <input type="text" name="diachi_nv" value="<?php echo $nhanvien_row['diachi_nhanvien']?>"
-                    class="input-df content__body-form-input">
+                    class="input-df content__body-form-input" required>
             </div>
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
                     Email
                 </h1>
                 <input type="email" name="email_nv" value="<?php echo $nhanvien_row['email_nhanvien']?>"
-                    class="input-df content__body-form-input">
+                    class="input-df content__body-form-input" required>
             </div>
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
                     CCCD/CMND
                 </h1>
-                <input type="number" name="cccd_nv" value="<?php echo $nhanvien_row['cccd_nhanvien']?>"
-                    class="input-df content__body-form-input">
+                <input type="tel" name="cccd_nv" id="cccd_nv" maxlength="12"  onkeypress="return isNumberKey(event);" value="<?php echo $nhanvien_row['cccd_nhanvien']?>"
+                    class="input-df content__body-form-input" required>
+                <span class="error-txt none" id="error-cccd">CCCD/CMND không hợp lệ!</span>
             </div>
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
@@ -104,7 +106,16 @@ if(isset($_POST['suanv'])){
                 <input type="date" name="ngayvaolam_nv" value="<?php echo $nhanvien_row['ngayvaolam_nhanvien']?>"
                     class="input-df input-df-date content__body-form-input">
             </div>
-
+        </div>
+        <div class="col l-4 c-12">
+            <div class="form-input content__body-form">
+                <h1 class="content__body-form-text">
+                    Phòng
+                </h1>
+                <input type="text" name="password_nv" value="<?php echo $phongban_row['ten_phongban']?>"
+                    class="input-df content__body-form-input" disabled>
+            </div>
+            
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
                     Chức vụ
@@ -141,9 +152,8 @@ if(isset($_POST['suanv'])){
                 <h1 class="content__body-form-text">
                     Mật khẩu
                 </h1>
-                <!-- <input type="password" name="password_nv" class="input-df content__body-form-input" disabled> -->
-                <input type="submit" name="sua_password_nv" value="Đổi mật khẩu"
-                    class="input-df input-df-date btn-main content__body-form-input">
+                <a href="?quanly=nhanvien&query=suamatkhau&iddv=<?php echo $iddv ?>&idpb=<?php echo $idpb?>&idnv=<?php echo $idnv?>"
+                    class="input-df input-df-date btn-main content__body-form-input a-defaul" style="color:white">Đổi mật khẩu</a>
             </div>
             <div class="form-input content__body-form">
                 <h1 class="content__body-form-text">
@@ -189,14 +199,10 @@ if(isset($_POST['suanv'])){
                     }
                     ?>
             </div>
-            <div class="form-input content__body-form">
-                <h1 class="content__body-form-text">
-                    Phòng
-                </h1>
-                <input type="text" name="password_nv" value="<?php echo $phongban_row['ten_phongban']?>"
-                    class="input-df content__body-form-input" disabled>
-            </div>
-            <input type="submit" name="suanv" value="Cập Nhật" class="btn-m btn-main content__body-btn"></input>
+            <input type="submit" name="suanv" id="btnsubmit" value="Cập Nhật" class="btn-m btn-main content__body-btn"></input>
+            
+        </div>
+        <div class="col l-4 c-12">
         </div>
     </div>
 </form>
