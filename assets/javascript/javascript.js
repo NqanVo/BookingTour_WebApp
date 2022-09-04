@@ -42,13 +42,8 @@ btn_themtv.onclick = function () {
 };
 
 //slider
-window.addEventListener("load", function () {
-  const slider = this.document.querySelector(".slider");
-  const slider_main = this.document.querySelector(".slider-main");
-  const slider_items = this.document.querySelectorAll(".slider-item");
-  const btn_next = this.document.querySelector(".btn-next");
-  const btn_pre = this.document.querySelector(".btn-pre");
-});
+
+
 
 //check value input
 var phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
@@ -94,6 +89,6 @@ function changeImage(id) {
 function isNumberKey(e) {
   var charCode = (e.which) ? e.which : e.keyCode;
   if (charCode > 31 && (charCode < 48 || charCode > 57))
-      return false;
+    return false;
   return true;
 }
