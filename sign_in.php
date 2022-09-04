@@ -1,8 +1,7 @@
  <?php
     session_start();
     include('quanly/config/config.php');
-    if(isset($_POST['dangnhap_user']))
-    {
+    if (isset($_POST['dangnhap_user'])) {
         $taikhoan = $_POST['taikhoan_user'];
         $matkhau = md5($_POST['matkhau_user']);
 
@@ -11,7 +10,7 @@
         //kết nối stmt với sql
         $stmt = mysqli_stmt_init($mysqli);
         //kiểm tra xem chuẩn bị đủ stmt vs mẩu select chưa
-        if(mysqli_stmt_prepare($stmt, $taikhoan_select)){
+        if (mysqli_stmt_prepare($stmt, $taikhoan_select)) {
             //gán biến cho ? theo chứ tự tương ứng, s = string, d = double, i = int
             mysqli_stmt_bind_param($stmt, "ss", $taikhoan, $matkhau);
             //thực thi select
@@ -20,25 +19,18 @@
             //kiểm tra tài khoản
             $taikhoan_row = mysqli_fetch_array($taikhoan_query);
             $taikhoan_count = mysqli_num_rows($taikhoan_query);
-            if($taikhoan_count == 0 || $taikhoan_row['status_nhanvien'] == 0)
-            {
+            if ($taikhoan_count == 0 || $taikhoan_row['status_nhanvien'] == 0) {
                 echo '<script>window.alert("Thông tin đăng nhập sai hoặc tài khoản đã bị khóa!");</script>';
-            }
-            else
-            {
+            } else {
                 $_SESSION['user_login'] = $taikhoan_row['id_nhanvien'];
                 header("Location:index.php?");
             }
-        }
-        else
-        {
+        } else {
             echo '<script>window.alert("prepare error!");</script>';
         }
-
-        
     }
 
- ?>
+    ?>
 
  <!DOCTYPE html>
  <html lang="en">
@@ -60,52 +52,51 @@
      <title>TravelVietNam</title>
 
      <style>
-     body {
-         height: 100vh;
-         background-image: radial-gradient(circle, #19cdf0, #00b9f7, #00a4fd, #008bfb, #196ef0);
-     }
+         body {
+             height: 100vh;
+             /* background-image: radial-gradient(circle, #19cdf0, #00b9f7, #00a4fd, #008bfb, #196ef0); */
+             background-image: url('https://storage.ko-fi.com/cdn/useruploads/display/80c9a163-20ac-45f1-aa90-1324e7e8be54_6ov01beacha.gif');
+             background-repeat: no-repeat;
+             background-position: center;
+             background-size: cover;
+         }
 
-     .desc-login {
-         font-style: italic;
-     }
+         .desc-login {
+             font-style: italic;
+         }
      </style>
  </head>
 
  <body>
-
- </body>
-
- </html>
-
- <!-- dang nhap  -->
- <form action="" method="POST" autocomplete="off">
-     <div class="container-login">
-         <div class="grid widd">
-             <div class="row">
-                 <div class="col l-12 c-12">
-                     <div class="container-login__box">
-                         <h1 class="container-login__box-heading">Đăng nhập</h1>
-                         <span class="container-login__box-heading desc-login">Travel VietNam</span>
-                         <div class="container-login__box__group">
-                             <h3 class="container-login__box__group-label">Tài khoản</h3>
-                             <input type="text" name="taikhoan_user" placeholder="Tên đăng nhập..."
-                                 class="input-df container-login__box__group-input" required>
-                         </div>
-                         <div class="container-login__box__group">
-                             <h3 class="container-login__box__group-label">Mật khẩu</h3>
-                             <div class="container-login__box__group-input-icon">
-                                 <input type="password" name="matkhau_user"
-                                     class="input-df container-login__box__group-input container-login__box__group-input-passwrod"
-                                     required>
-                                 <i class="fa-solid fa-eye container-login__box__group-icon"></i>
-                                 <i class="fa-solid fa-eye-slash container-login__box__group-icon showHidePw"></i>
+     <!-- dang nhap  -->
+     <form action="" method="POST" autocomplete="off">
+         <div class="container-login">
+             <div class="grid widd">
+                 <div class="row no-gutters">
+                     <div class="col l-12 c-12">
+                         <div class="container-login__box">
+                             <h1 class="container-login__box-heading">Đăng nhập</h1>
+                             <span class="container-login__box-heading desc-login">Travel VietNam</span>
+                             <div class="container-login__box__group">
+                                 <h3 class="container-login__box__group-label">Tài khoản</h3>
+                                 <input type="text" name="taikhoan_user" placeholder="Tài khoản và mật khẩu: admin" class="input-df container-login__box__group-input" required>
                              </div>
+                             <div class="container-login__box__group">
+                                 <h3 class="container-login__box__group-label">Mật khẩu</h3>
+                                 <div class="container-login__box__group-input-icon">
+                                     <input type="password" name="matkhau_user" class="input-df container-login__box__group-input container-login__box__group-input-passwrod" required>
+                                     <i class="fa-solid fa-eye container-login__box__group-icon"></i>
+                                     <i class="fa-solid fa-eye-slash container-login__box__group-icon showHidePw"></i>
+                                 </div>
+                             </div>
+                             <input type="submit" name="dangnhap_user" value="Đăng nhập" class="btn-m btn-main container-login__box-btn"></input>
                          </div>
-                         <input type="submit" name="dangnhap_user" value="Đăng nhập"
-                             class="btn-m btn-main container-login__box-btn"></input>
                      </div>
                  </div>
              </div>
          </div>
-     </div>
- </form>
+     </form>
+     <script src="./assets/javascript/javascript.js"></script>
+ </body>
+
+ </html>
